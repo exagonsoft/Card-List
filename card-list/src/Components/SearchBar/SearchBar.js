@@ -4,7 +4,9 @@ import { BarContainer } from './Components/BarContainer'
 const SearchBar = () => {
   return (
     <>
-      <BarContainer />
+      <BarContainer >
+        
+      </BarContainer>
     </>
   )
 }
