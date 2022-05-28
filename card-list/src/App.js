@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   const Filters = {
+    Name: "",
     HQ: false,
     Character: false,
     Technology: false,
@@ -24,14 +25,18 @@ function App() {
   function OnFiltersClick(filtersData){
     setshowFilters(!showFilters);
     setFilters(filtersData);
-    console.log(filtersData);
+    console.log(filters);
   }
-  function OnFilterSelected(){
-
+  function OnNameFilterChange(sender, field){
+    setFilters({
+      ...filters,
+      [field]: sender.target.value,
+    });
+    console.log(filters);
   }
   return (
     <>
-      <SearchBar showFilters={showFilters} OnFiltersClick={OnFiltersClick} />
+      <SearchBar showFilters={showFilters} OnNameFilterChange={OnNameFilterChange} OnFiltersClick={OnFiltersClick} />
       <List Filters={filters}/>
     </>
   );
