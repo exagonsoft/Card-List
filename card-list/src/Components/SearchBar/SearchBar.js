@@ -10,7 +10,7 @@ import { FiltersContainerItemList } from './Components/FiltersContainerItemsList
 import { FiltersContainerTitle } from './Components/FiltersContainerTitle'
 import { FiltersContainerSubTitle } from './Components/FiltersContainerSubTitle'
 import { FiltersContainerCheckBox } from './Components/FilterContainerCheckBox'
-import { FiltersContainerCheckBoxWrapper } from './FiltersContainerCheckBoxWrapper'
+import { FiltersContainerCheckBoxWrapper } from './Components/FiltersContainerCheckBoxWrapper'
 import { FiltersContainerWrapper } from './Components/FiltersContainerWrapper'
 
 const SearchBar = (props) => {

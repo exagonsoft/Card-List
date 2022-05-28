@@ -11,6 +11,7 @@ export const BarContainer = styled.div`
   align-self: center;
   margin-left: 20%;
   margin-top: 20px;
+  margin-bottom: 40px;
   padding: 5px 0 5px 0;
 
   @media screen and (max-width: 850px) {
