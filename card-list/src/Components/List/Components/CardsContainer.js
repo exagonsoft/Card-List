@@ -7,4 +7,6 @@ export const CardsContainer = styled.div`
   padding: 20px;
   border: 2px solid #cc;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 `
