@@ -1,13 +1,16 @@
 import styled from "styled-components"
 
 export const FiltersContainer = styled.div`
-  width: 30%;
+  transition: all 1s ease-in-out;
+  width: 80%;
+  height: ${({ Showed }) => (Showed ? "fit-content" : "0px")};
+  opacity: ${({ Showed }) => (Showed ? "1" : "0")};
   border: 2px solid black;
   border-radius: 0 0 5px 5px;
   background-color: #222228;
   position: relative;
-  margin-left: -30%;
-  cursor: pointer;
+  margin-left: 10%;
+  top: -3px;
   z-index: 100;
-  display: none;
+  display: ${({ Showed }) => (Showed ? "flex" : "none")};
 `
