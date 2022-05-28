@@ -4,6 +4,7 @@ import { FilterIcon } from './Components/FilterIcon'
 import { FiltersButton } from './Components/FiltersButton'
 import { FiltersContainer } from './Components/FiltersContainer'
 import AccountFilterIcon from '../../Pictures/AccountFilterIcon.png'
+import { SearchByName } from './Components/SearchByName'
 
 const SearchBar = () => {
   return (
@@ -16,6 +17,7 @@ const SearchBar = () => {
         <FiltersContainer>
           
         </FiltersContainer>
+        <SearchByName placeholder="Search By Name"/>
       </BarContainer>
     </>
   )
