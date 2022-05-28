@@ -7,6 +7,13 @@ export const FiltersButton = styled.div`
   background-color: #222228;
   cursor: pointer;
   margin-left: 5px;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  
+  padding: 5px;
   z-index: 150;
   transition: all 0.3s ease-in-out;
 
