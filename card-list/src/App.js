@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import List from "./Components/List/List";
 import SearchBar from "./Components/SearchBar/SearchBar";
+import SingleCard from "./Components/SingleCard/SingleCard";
 import { JsonList } from "./Utils/MockData";
 
 function App() {
@@ -25,8 +26,13 @@ function App() {
   const [HQCardList, setHQCardList] = useState([]);
   const [CharCardList, setCharCardList] = useState([]);
   const [TechCardList, setTechCardList] = useState([]);
+  const [ShowSingle, setShowSingle] = useState(false);
 
   const CardList = JsonList;
+
+  function TogleSingleCard(card){
+
+  }
 
   function OnFiltersClick() {
     setshowFilters(!showFilters);
@@ -164,7 +170,9 @@ function App() {
         HQCardList={HQCardList}
         CharCardList={CharCardList}
         TechCardList={TechCardList}
+        TogleSingleCard={TogleSingleCard}
       />
+      <SingleCard />
     </>
   );
 }

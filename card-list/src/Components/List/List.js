@@ -27,6 +27,9 @@ const List = (props) => {
                   hqCard["id"] +
                   ".png?tx=h_600,q_80,f_auto"
                 }
+                onClick={() => {
+                  props.TogleSingleCard(hqCard);
+                }}
               />
             ))}
           </CardsItemsContainer>
@@ -44,6 +47,9 @@ const List = (props) => {
                     chCard["id"] +
                     ".png?tx=h_600,q_80,f_auto"
                   }
+                  onClick={() => {
+                    props.TogleSingleCard(chCard);
+                  }}
                 />
               ) : (
                 <CharCard
@@ -54,6 +60,9 @@ const List = (props) => {
                     chCard["id"] +
                     ".gif?tx=h_600,q_80,f_auto"
                   }
+                  onClick={() => {
+                    props.TogleSingleCard(chCard);
+                  }}
                 />
               )
             )}
@@ -72,6 +81,9 @@ const List = (props) => {
                     techCard["id"] +
                     ".png?tx=h_600,q_80,f_auto"
                   }
+                  onClick={() => {
+                    props.TogleSingleCard(techCard);
+                  }}
                 />
               ) : (
                 <TechCard
@@ -82,6 +94,9 @@ const List = (props) => {
                     techCard["id"] +
                     ".gif?tx=h_600,q_80,f_auto"
                   }
+                  onClick={() => {
+                    props.TogleSingleCard(techCard);
+                  }}
                 />
               )
             )}
