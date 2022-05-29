@@ -1,1 +1,0 @@
-export const CardList = fetch("https://pastebin.com/raw/Yt8YLDV1").json();
