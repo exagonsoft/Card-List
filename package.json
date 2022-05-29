@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.27.2",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "cors-anywhere": "^0.4.4"
   }
 }
