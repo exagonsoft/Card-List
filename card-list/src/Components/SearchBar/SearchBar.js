@@ -14,42 +14,12 @@ import { FiltersContainerCheckBoxWrapper } from './Components/FiltersContainerCh
 import { FiltersContainerWrapper } from './Components/FiltersContainerWrapper'
 
 const SearchBar = (props) => {
-  const Filters = {
-    Name: "",
-    HQ: false,
-    Character: false,
-    Technology: false,
-    Awaken: false,
-    Entropy: false,
-    Inhuman: false,
-    Owner: false,
-    Undeviant: false,
-    Legendary: false,
-    Rare: false,
-    UnCommon: false,
-    Common: false,
-  };
-  const [filters, setFilters] = useState(Filters);
-  function UpdateFilters(sender, field){
-    let data = null;
-
-    if (sender.target.checked) {
-      data = true;
-    } else {
-      data = false;
-    }
-    setFilters({
-      ...filters,
-      [field]: data,
-    });
-  }
   return (
     <>
       <BarContainer >
         <FiltersContainerWrapper>
         <FiltersButton Showed={props.showFilters} onClick={() => {
-          let filterData = filters;
-          props.OnFiltersClick(filterData);
+          props.OnFiltersClick();
         }}>
           <FilterIcon src={AccountFilterIcon} />
           {props.showFilters ? ('Apply') : ('Filters')}
@@ -60,42 +30,42 @@ const SearchBar = (props) => {
             <FiltersContainerTitle>FILTERS</FiltersContainerTitle>
             <FiltersContainerSubTitle>Card Type</FiltersContainerSubTitle>
             <FiltersContainerCheckBoxWrapper>
-              <FiltersContainerCheckBox id="filterTypeHQ" onChange={(sender) => UpdateFilters(sender, "HQ")} type="checkbox"></FiltersContainerCheckBox>HQ
+              <FiltersContainerCheckBox id="filterTypeHQ" onChange={(sender) => props.OnBoolFiltersChange(sender, "HQ")} type="checkbox"></FiltersContainerCheckBox>HQ
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterTypeCHR" onChange={(sender) => UpdateFilters(sender, "Character")} type="checkbox"></FiltersContainerCheckBox>Character
+            <FiltersContainerCheckBox id="filterTypeCHR" onChange={(sender) => props.OnBoolFiltersChange(sender, "Character")} type="checkbox"></FiltersContainerCheckBox>Character
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterTypeTECH" onChange={(sender) => UpdateFilters(sender, "Technology")} type="checkbox"></FiltersContainerCheckBox>Technology
+            <FiltersContainerCheckBox id="filterTypeTECH" onChange={(sender) => props.OnBoolFiltersChange(sender, "Technology")} type="checkbox"></FiltersContainerCheckBox>Technology
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerSubTitle>Factions</FiltersContainerSubTitle>
             <FiltersContainerCheckBoxWrapper>
-              <FiltersContainerCheckBox id="filterFactionAwaken" onChange={(sender) => UpdateFilters(sender, "Awaken")} type="checkbox"></FiltersContainerCheckBox>Awaken
+              <FiltersContainerCheckBox id="filterFactionAwaken" onChange={(sender) => props.OnBoolFiltersChange(sender, "Awaken")} type="checkbox"></FiltersContainerCheckBox>Awaken
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterFactionEntropy" onChange={(sender) => UpdateFilters(sender, "Entropy")} type="checkbox"></FiltersContainerCheckBox>Entropy
+            <FiltersContainerCheckBox id="filterFactionEntropy" onChange={(sender) => props.OnBoolFiltersChange(sender, "Entropy")} type="checkbox"></FiltersContainerCheckBox>Entropy
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterFactionInhuman" onChange={(sender) => UpdateFilters(sender, "Inhuman")} type="checkbox"></FiltersContainerCheckBox>Inhuman
+            <FiltersContainerCheckBox id="filterFactionInhuman" onChange={(sender) => props.OnBoolFiltersChange(sender, "Inhuman")} type="checkbox"></FiltersContainerCheckBox>Inhuman
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterFactionOwner" onChange={(sender) => UpdateFilters(sender, "Owner")} type="checkbox"></FiltersContainerCheckBox>Owner
+            <FiltersContainerCheckBox id="filterFactionOwner" onChange={(sender) => props.OnBoolFiltersChange(sender, "Owner")} type="checkbox"></FiltersContainerCheckBox>Owner
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterFactionUndeviant" onChange={(sender) => UpdateFilters(sender, "Undeviant")} type="checkbox"></FiltersContainerCheckBox>Undeviant
+            <FiltersContainerCheckBox id="filterFactionUndeviant" onChange={(sender) => props.OnBoolFiltersChange(sender, "Undeviant")} type="checkbox"></FiltersContainerCheckBox>Undeviant
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerSubTitle>Rarity</FiltersContainerSubTitle>
             <FiltersContainerCheckBoxWrapper>
-              <FiltersContainerCheckBox id="filterRarityLeg" onChange={(sender) => UpdateFilters(sender, "Legendary")} type="checkbox"></FiltersContainerCheckBox>Legendary
+              <FiltersContainerCheckBox id="filterRarityLeg" onChange={(sender) => props.OnBoolFiltersChange(sender, "Legendary")} type="checkbox"></FiltersContainerCheckBox>Legendary
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterRarityRare" onChange={(sender) => UpdateFilters(sender, "Rare")} type="checkbox"></FiltersContainerCheckBox>Rare
+            <FiltersContainerCheckBox id="filterRarityRare" onChange={(sender) => props.OnBoolFiltersChange(sender, "Rare")} type="checkbox"></FiltersContainerCheckBox>Rare
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterRarityUnCom" onChange={(sender) => UpdateFilters(sender, "UnCommon")} type="checkbox"></FiltersContainerCheckBox>UnCommon
+            <FiltersContainerCheckBox id="filterRarityUnCom" onChange={(sender) => props.OnBoolFiltersChange(sender, "UnCommon")} type="checkbox"></FiltersContainerCheckBox>UnCommon
             </FiltersContainerCheckBoxWrapper>
             <FiltersContainerCheckBoxWrapper>
-            <FiltersContainerCheckBox id="filterRarityCommon" onChange={(sender) => UpdateFilters(sender, "Common")} type="checkbox"></FiltersContainerCheckBox>Common
+            <FiltersContainerCheckBox id="filterRarityCommon" onChange={(sender) => props.OnBoolFiltersChange(sender, "Common")} type="checkbox"></FiltersContainerCheckBox>Common
             </FiltersContainerCheckBoxWrapper>
           </FiltersContainerItemList>
         </FiltersContainer>
