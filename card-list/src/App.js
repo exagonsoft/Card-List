@@ -25,14 +25,12 @@ function App() {
   function OnFiltersClick(filtersData){
     setshowFilters(!showFilters);
     setFilters(filtersData);
-    console.log(filters);
   }
   function OnNameFilterChange(sender, field){
     setFilters({
       ...filters,
       [field]: sender.target.value,
     });
-    console.log(filters);
   }
   return (
     <>
