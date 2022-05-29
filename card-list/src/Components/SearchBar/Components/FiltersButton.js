@@ -18,6 +18,10 @@ export const FiltersButton = styled.div`
   z-index: 150;
   transition: all 0.3s ease-in-out;
 
+  @media screen and (max-width: 850px) {
+    border-radius:${({ Showed }) => (Showed ? "5px 5px 0 5px" : "5px 5px 5px 5px")};
+  }
+
   &:hover {
     border: 2px solid #16d934;
     box-shadow: 2px 2px 2px 2px #000;

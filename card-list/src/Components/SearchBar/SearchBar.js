@@ -47,7 +47,7 @@ const SearchBar = (props) => {
     <>
       <BarContainer >
         <FiltersContainerWrapper>
-        <FiltersButton onClick={() => {
+        <FiltersButton Showed={props.showFilters} onClick={() => {
           let filterData = filters;
           props.OnFiltersClick(filterData);
         }}>

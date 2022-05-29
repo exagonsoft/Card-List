@@ -10,7 +10,11 @@ export const FiltersContainer = styled.div`
   background-color: #222228;
   position: relative;
   margin-left: 10%;
-  top: -3px;
+  top: -2px;
   z-index: 100;
   display: ${({ Showed }) => (Showed ? "flex" : "none")};
+
+  @media screen and (max-width: 850px) {
+    width: 120%;
+  }
 `

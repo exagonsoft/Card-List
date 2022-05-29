@@ -11,6 +11,10 @@ export const SearchByName = styled.input`
   transition: all 0.3s ease-in-out;
   color: #ffffff;
 
+  @media screen and (max-width: 850px) {
+    width: 60%;
+    margin-left: 15px;
+  }
   &:focus{
     
   }
