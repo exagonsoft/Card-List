@@ -10,7 +10,7 @@
 # Instructions
  
  -Ensure you have the last version of Node installed
- -Download or clone the project <a href="https://github.com/exagonsoft/GateWays">Card List</a>  from this repo<br/>
+ -Download or clone the project <a href="https://github.com/exagonsoft/Card-List">Card List</a>  from this repo<br/>
  -Unpack the content(if not cloned)<Br/>
  -Go to the "card-list" folder in the extracted package<Br/>
  -Open a terminal and run the "npm start" syntax<Br/>
