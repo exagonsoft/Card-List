@@ -38,7 +38,7 @@ const List = (props) => {
           <CardsContainersTitle>Characters</CardsContainersTitle>
           <CardsItemsContainer>
             {props.CharCardList.map((chCard, index) =>
-              chCard["CardType"] === "Common" ? (
+              chCard["Rarity"] === "Common" ? (
                 <CharCard
                   id={index++}
                   key={index++}
@@ -72,7 +72,7 @@ const List = (props) => {
           <CardsContainersTitle>Technologies</CardsContainersTitle>
           <CardsItemsContainer>
             {props.TechCardList.map((techCard, index) =>
-              techCard["CardType"] === "Common" ? (
+              techCard["Rarity"] === "Common" ? (
                 <TechCard
                   id={index++}
                   key={index++}

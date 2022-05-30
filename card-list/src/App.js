@@ -27,11 +27,18 @@ function App() {
   const [CharCardList, setCharCardList] = useState([]);
   const [TechCardList, setTechCardList] = useState([]);
   const [ShowSingle, setShowSingle] = useState(false);
+  const [Card, setCard] = useState({});
 
   const CardList = JsonList;
 
-  function TogleSingleCard(card){
-
+  function TogleSingleCard(card) {
+    if (ShowSingle) {
+      setShowSingle(false);
+      setCard({});
+    } else {
+      setShowSingle(true);
+      setCard(card);
+    }
   }
 
   function OnFiltersClick() {
@@ -42,6 +49,9 @@ function App() {
       ...filters,
       [field]: sender.target.value,
     });
+    let tempData = filters;
+    tempData[field] = sender.target.value;
+    setFilters(tempData);
     GetCardLists();
   }
   function OnBoolFiltersChange(sender, field) {
@@ -172,7 +182,11 @@ function App() {
         TechCardList={TechCardList}
         TogleSingleCard={TogleSingleCard}
       />
-      <SingleCard />
+      <SingleCard
+        ShowSingle={ShowSingle}
+        TogleSingleCard={TogleSingleCard}
+        Card={Card}
+      />
     </>
   );
 }
