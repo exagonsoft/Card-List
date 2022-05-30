@@ -30,6 +30,8 @@ function App() {
   const [Card, setCard] = useState({});
 
   const CardList = JsonList;
+  //***This is the normal procedure to get the cards list */
+  //const CardList = async () => {await fetch("https://pastebin.com/raw/Yt8YLDV1")).json();}
 
   function TogleSingleCard(card) {
     if (ShowSingle) {
